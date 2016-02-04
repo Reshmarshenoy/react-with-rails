@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDom,{Server} from "react-dom";
+import checkoutStore from '../store/checkout-store';
+
 class TopSearch extends React.Component{
   constructor(){
     console.log("Initial")
@@ -71,9 +73,17 @@ class CartIconOnTopBar extends React.Component{
   constructor(){
     super()
     this.state = {
-      cartItemCount: 0
+      cartItemCount: checkoutStore.getCart()
     }
   }
+  componentDidMount(){
+   checkoutStore.addListener(this.updateCart)
+  };
+  updateCart = () => {
+    this.setState({
+      cartItemCount: checkoutStore.getCart()
+    })
+  };
   openClassModal = () => {
     
   };

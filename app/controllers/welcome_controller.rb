@@ -5,6 +5,9 @@ class WelcomeController < ApplicationController
   def product
   
   end 
+  def checkout
+    puts params.inspect
+  end 
   def about
   end
 

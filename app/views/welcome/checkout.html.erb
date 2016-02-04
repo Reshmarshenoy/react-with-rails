@@ -1,0 +1,24 @@
+<div class="home">
+  <div class="row">
+    <div class="small-12 medium-4 large-3 columns">
+      <%= render "common/sidebar" %>
+    </div>
+    <div class="small-12 medium-8 large-9 columns">
+     
+      <!-- Pagination section-->
+ <ul>
+  <% params[:products].split(",").each do |product| %>
+  <li>
+    <%= product %>
+  </li>
+  
+  <% end %>
+
+</ul> 
+      <!-- eof pagination -->
+    </div>
+  </div>
+</div>
+
+
+ 

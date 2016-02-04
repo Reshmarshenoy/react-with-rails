@@ -1,5 +1,7 @@
 import React from "react";
 import ProductApis from "../../fakeApi/fake-product-api"
+import checkoutStore from "../../store/checkout-store";
+
 class ProductGallery extends React.Component{
   constructor(){
     super()

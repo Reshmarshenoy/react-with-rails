@@ -5,6 +5,7 @@ import Sidebar from "./components/sidebar";
 import TopSearch from "./components/top-header";
 import ProductGallery from "./components/product/product-gallery";
 import Pagination from "./components/pagination";
+import CartElements from "./components/cart-action-elements";
 
 ReactDom.render( <Sidebar />, document.getElementById('sidebar-elements'))
 ReactDom.render(<TopSearch />, document.getElementById('top-search-bar'))  
@@ -24,3 +25,8 @@ if(paginationElement.length > 0){
   ReactDom.render(<Pagination/>, document.getElementById('pagination'))
 }
 
+var cartActionElement = document.querySelectorAll('#add-cart-actions');
+if(cartActionElement.length > 0){
+  console.log("Hello");
+  ReactDom.render(<CartElements/>, document.getElementById('add-cart-actions'))
+}
